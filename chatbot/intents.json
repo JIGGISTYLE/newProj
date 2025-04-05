@@ -1,0 +1,102 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi", "Hey", "Hello", "Good morning", "Good evening", "What's up", "Yo", "Hi there"
+        ],
+        "responses": [
+          "Hey! Ready to crush your fitness goals?",
+          "Hello! How can I support your fitness journey?",
+          "Hi there! Want some workout tips?"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": [
+          "Bye", "See you", "Goodbye", "Catch you later", "I'm leaving", "Talk to you later"
+        ],
+        "responses": [
+          "Stay active! See you soon 💪",
+          "Take care and keep moving!",
+          "Goodbye! Keep pushing your limits!"
+        ]
+      },
+      {
+        "tag": "thanks",
+        "patterns": [
+          "Thanks", "Thank you", "Appreciate it", "Thx", "Thanks a lot"
+        ],
+        "responses": [
+          "You're welcome! Anytime you need motivation 💯",
+          "No problem! Keep going strong!",
+          "Glad to help you stay fit!"
+        ]
+      },
+      {
+        "tag": "cardio_tips",
+        "patterns": [
+          "I want to improve my endurance",
+          "Any cardio tips?", "How do I get better at running?",
+          "Cardio workout suggestions", "Best way to lose fat", "Tips for stamina"
+        ],
+        "responses": [
+          "Try interval training like sprint-walk cycles or cycling for 30 minutes.",
+          "Jump rope, brisk walking, or jogging 3–5 times a week will boost endurance.",
+          "Aim for 150 minutes of moderate cardio or 75 minutes of high-intensity cardio weekly."
+        ]
+      },
+      {
+        "tag": "strength_tips",
+        "patterns": [
+          "How do I build muscle?", "Tips for strength training",
+          "Best strength workouts", "How to gain muscle", "Lifting advice"
+        ],
+        "responses": [
+          "Focus on compound lifts: squats, deadlifts, bench press, and rows.",
+          "Train each muscle group 2x per week and progressively overload.",
+          "Combine proper form, nutrition, and recovery for muscle growth."
+        ]
+      },
+      {
+        "tag": "diet",
+        "patterns": [
+          "What should I eat?", "Diet tips", "Nutrition advice", "What’s a good fitness meal?",
+          "Healthy food suggestions", "Meal plan tips"
+        ],
+        "responses": [
+          "Include lean protein, complex carbs, healthy fats, and stay hydrated.",
+          "Pre-workout: carbs + protein. Post-workout: protein + carbs to recover.",
+          "Try chicken, brown rice, veggies, eggs, oats, and fruits for clean energy."
+        ]
+      },
+      {
+        "tag": "provide_info",
+        "patterns": [
+          "my weight is 70 and height is 175", 
+          "I'm 60kg and 165cm", 
+          "weight 80kg height 170cm", 
+          "I weigh 90kg and I'm 180cm tall",
+          "68 175", 
+          "height is 160 and weight is 50", 
+          "my stats are 85 and 178"
+        ],
+        "responses": [
+          "Got it! Let me calculate your BMI and suggest a workout."
+        ]
+      },
+      {
+        "tag": "motivation",
+        "patterns": [
+          "Give me some motivation", "I feel lazy", "Any fitness quotes?", "Help me stay consistent",
+          "How to stay motivated?"
+        ],
+        "responses": [
+          "Discipline beats motivation. Show up every day!",
+          "No pain, no gain. You got this 💪",
+          "Results happen over time, not overnight. Stay consistent!"
+        ]
+      }
+    ]
+  }
+  
