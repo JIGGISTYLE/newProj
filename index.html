@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFreak - AI Exercise Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-container">
+                <i class="fas fa-dumbbell"></i>
+                <h1>FitFreak</h1>
+            </div>
+            <p class="tagline">AI-Powered Exercise Tracking & Form Analysis</p>
+        </header>
+
+        <main class="main-content">
+            <div class="exercise-selection">
+                <h2><i class="fas fa-list-ul"></i> Choose Your Exercise</h2>
+                <div class="exercise-grid">
+                    <button class="exercise-btn" data-exercise="pushup">
+                        <i class="fas fa-child"></i>
+                        <span>Push-ups</span>
+                    </button>
+                    <button class="exercise-btn" data-exercise="jumpingjack">
+                        <i class="fas fa-running"></i>
+                        <span>Jumping Jacks</span>
+                    </button>
+                    <button class="exercise-btn" data-exercise="squat">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>Squats</span>
+                    </button>
+                    <button class="exercise-btn" data-exercise="lunge">
+                        <i class="fas fa-walking"></i>
+                        <span>Lunges</span>
+                    </button>
+                    <button class="exercise-btn" data-exercise="highknee">
+                        <i class="fas fa-running"></i>
+                        <span>High Knees</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="workout-container">
+                <div class="demo-section">
+                    <div class="demo-card">
+                        <h3><i class="fas fa-play-circle"></i> Exercise Demo</h3>
+                        <div class="demo-content">
+                            <img id="demo-gif" src="" alt="Exercise demonstration">
+                            <div class="instruction-box">
+                                <h4><i class="fas fa-info-circle"></i> Instructions</h4>
+                                <p id="exercise-instructions">Select an exercise to begin</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-container">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Repetitions</h3>
+                                <div id="counter" class="stat-value">0</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Form Score</h3>
+                                <div id="form-score" class="stat-value">0%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="camera-section">
+                    <div class="camera-card">
+                        <h3><i class="fas fa-camera"></i> Live Exercise Tracking</h3>
+                        <div class="camera-container">
+                            <video id="video" playsinline style="display: none;"></video>
+                            <canvas id="canvas"></canvas>
+                        </div>
+                        <div class="control-buttons">
+                            <button id="start-btn" class="control-btn start">
+                                <i class="fas fa-play"></i> Start Tracking
+                            </button>
+                            <button id="stop-btn" class="control-btn stop" disabled>
+                                <i class="fas fa-stop"></i> Stop
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>Made with <i class="fas fa-heart"></i> by FitFreak Team</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link"><i class="fas fa-book"></i> Guide</a>
+                <a href="#" class="footer-link"><i class="fas fa-question-circle"></i> Help</a>
+                <a href="#" class="footer-link"><i class="fas fa-code"></i> About</a>
+            </div>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
